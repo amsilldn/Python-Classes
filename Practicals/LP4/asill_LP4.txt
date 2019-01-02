@@ -1,0 +1,21 @@
+cgi.soic.indiana.edu/~asill/TuneShop.cgi
+
+CREATE TABLE Songs (
+songID INT  NOT NULL AUTO_INCREMENT,
+Song VARCHAR(50) NOT NULL,
+Artist VARCHAR(50), 
+Genre VARCHAR(25),
+Price DECIMAL(10,2),
+PRIMARY KEY (songID)
+);
+
+CREATE TABLE MyTunes (
+MyTunesID int NOT NULL AUTO_INCREMENT,
+SongID int NOT NULL,
+PRIMARY KEY (MyTunesID)
+);
+
+INSERT INTO Songs (Song, Artist, Genre, Price)
+VALUES ('Hello', 'Adele', 'Pop', '1.29'),
+('Water Under the Bridge', 'Greg', 'Dance', '1.29'),
+('Send My Love', 'Adele', 'Pop', '1.29');

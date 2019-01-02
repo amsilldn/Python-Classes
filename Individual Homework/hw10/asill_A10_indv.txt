@@ -1,0 +1,34 @@
+/*Amanda Sill
+Group 6
+A10*/
+
+/*1*/
+create table Singer(
+SingerID int unique,
+FirstName varchar(30),
+LastName varchar(30),
+Label varchar(30),
+Salary int,
+Style varchar(30));
+
+
+/*2*/
+create table Tour(
+TourID int unique,
+TourName varchar(30),
+Begin date,
+End date,
+Headliner int);
+
+/*3
+I inserted more than required to ensure select statement on next
+problem returns desired result*/
+insert into Singer(SingerID, FirstName, LastName, Label, Salary, Style)
+values(00000000001, "Stacy", "Hogan", "Sony", 251000, "Rock"),
+(00000000002, "Merrill", "Nisker", "XL", 300000, "Electropunk"),
+(00000000003, "Jospeh", "Stringer", "Sony", 150000, "New Age");
+
+/*4*/
+select s.FirstName, s.LastName
+from Singer as s
+where s.salary < 250000 and s.Label = "Sony";
